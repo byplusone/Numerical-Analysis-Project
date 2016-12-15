@@ -1,0 +1,11 @@
+n=20;  
+x0=-1:2/n:1;  
+y0=1./(1+25*x0.^2);
+x=-1:.001:1;
+y=1./(1+25*x.^2);
+y1=Fit(x0,y0,3,x);
+plot(x,y,x,y1,'-.',x0,y0,'p');  
+legend('Runge Function','fitting function',' fitting point');
+title('n=20, Runge Phenomenon by 3-Fitting'); 
+xlabel('x'); 
+ylabel('y');
